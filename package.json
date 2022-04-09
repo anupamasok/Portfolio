@@ -1,0 +1,27 @@
+{
+  "name": "anupams-portfolio",
+  "version": "1.0.0",
+  "description": "Anupams portfolio website",
+  "main": "tailwind.config.js",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  },
+  "scripts": {
+    "build": "tailwindcss build ./src/styles.css -o ./public/styles.css",
+    "prod": "tailwindcss build ./src/styles.css -o ./public/styles.css  --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anupamasok/Portfolio.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "website"
+  ],
+  "author": "Anupam Asok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anupamasok/Portfolio/issues"
+  },
+  "homepage": "https://github.com/anupamasok/Portfolio#readme"
+}

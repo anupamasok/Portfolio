@@ -1,0 +1,120 @@
+@tailwind base;
+
+.bg-card {
+  @apply absolute z-10 inset-0 bg-gradient-to-tr from-mainColor-500 to-secondaryColor-500 shadow-lg
+                transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg;
+}
+
+.landingCardIcon {
+  @apply hover:text-black animCharacteristics;
+}
+
+.profilePic {
+  @apply relative z-20 object-cover object-center shadow-lg;
+}
+
+.experience-left {
+  @apply sm:w-1/3 content-center text-center sm:pr-8 inline-flex items-center justify-center;
+}
+
+.experience-left-logo {
+  @apply rounded-lg overflow-hidden;
+}
+
+.experience-left-logo-img {
+  @apply object-cover object-center h-full w-full animCharacteristics hover:-translate-y-1;
+}
+
+.experience-right {
+  @apply sm:w-2/3 sm:pl-8 my-6 sm:py-2 sm:border-l sm:h-full text-base sm:text-left sm:border-t-0 border-gray-200;
+}
+
+.experience-company-outer {
+  @apply flex flex-col sm:flex-row;
+}
+
+.experience-position {
+  @apply tracking-wide mt-2 text-xl text-gray-700;
+}
+
+.experience-position-sub-icon {
+  @apply mr-1 text-gray-800 translate-y-0.5;
+}
+
+.experience-text {
+  @apply leading-relaxed;
+}
+
+.experience-mark {
+  @apply inline-block py-0 px-1 rounded bg-gray-200 text-gray-800 text-xs font-medium;
+}
+
+.hoverClickAnim {
+  @apply cursor-pointer animCharacteristics
+  hover:shadow-xl hover:shadow-mainColor-400 hover:shadow-inner touch-manipulation;
+}
+
+.hoverColorChange {
+  @apply text-gray-800 duration-500 ease-in-out;
+}
+
+.hoverConnectIcon {
+  @apply inline-flex items-center justify-center mb-5 flex-shrink-0 cursor-pointer rounded-full
+   hoverColorChange hoverClickAnim;
+}
+
+.skillItem {
+  @apply flex items-center rounded sm:px-5 py-1 my-1 hover:bg-gray-100 duration-75;
+}
+
+.skillStars {
+  @apply flex items-center text-mainColor-500 grid grid-cols-5 gap-1;
+}
+
+.socialIconSize {
+  @apply w-12 h-12 sm:w-20 sm:h-20;
+}
+
+.socialInnerIconSize {
+  @apply w-8 h-8 sm:w-12 sm:h-12;
+}
+
+.textMark {
+  @apply underline decoration-secondaryColor-300;
+}
+
+.galleryImage {
+  @apply w-full object-cover h-full object-center block transition grayscale duration-500 hover:grayscale-0;
+}
+
+.sectionOuter {
+  @apply pt-10 sm:pt-20 sm:pb-10 px-8;
+}
+
+.sectionTitle {
+  @apply text-5xl sm:text-6xl font-bold text-gray-800;
+}
+
+.animCharacteristics {
+  @apply duration-300 transition;
+}
+
+.linkStyle {
+  @apply experience-mark animCharacteristics hover:bg-mainColor-200;
+}
+
+.footerIcon {
+  @apply landingCardIcon;
+}
+
+.longButton {
+  @apply px-6 rounded sm:text-lg hoverClickAnim hoverColorChange;
+}
+
+.sectionButton {
+  @apply w-full sm:w-auto flex-shrink-0 py-2 px-6 rounded sm:text-lg mt-4 sm:mt-4
+  hoverClickAnim hoverColorChange text-center mx-auto justify-center;
+}
+
+@tailwind components;
+@tailwind utilities;
