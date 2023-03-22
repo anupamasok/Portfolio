@@ -1,6 +1,10 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
-  content: ["./_site/**/*.{html,njk}"],
+  content: [
+    // "./public/**/*.{html,njk}",
+    // "./src/**/*.{html,njk}",
+    "./src/_includes/**/*.{html,njk,css}",
+  ],
   theme: {
     extend: {
       borderWidth: {
