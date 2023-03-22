@@ -13,9 +13,9 @@
   "scripts": {
     "serve": "npx eleventy --serve",
     "watch": "npx tailwindcss build -i src/styles.css -o ./src/css/styles.css --watch",
-    "build": "npx tailwindcss build -i src/styles.css -o ./src/css/styles.css --minify",
+    "build": "npx eleventy; npx tailwindcss build -i src/styles.css -o ./src/css/styles.css --minify",
     "dev": "concurrently --kill-others \"npm run serve\" \"npm run watch\"",
-    "prod": "concurrently --kill-others \"npm run serve\" \"npm run build\""
+    "prodServe": "concurrently --kill-others \"npm run serve\" \"npm run build\""
   },
   "repository": {
     "type": "git",
