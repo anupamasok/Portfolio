@@ -1,0 +1,9 @@
+{% macro service(title, quote, author) %}
+    <div class="row text-center">
+        <h1 class="sectionTitle">
+            {{title}}
+        </h1>
+        <p class="pt-4">“{{quote}}” - <a class="font-light">{{author}}</a>
+        </p>
+    </div>
+{% endmacro%}

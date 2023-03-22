@@ -1,9 +1,6 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
-  purge: {
-    content: ["./public/**/*.html"],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ["./_site/**/*.{html,njk}"],
   theme: {
     extend: {
       borderWidth: {
@@ -20,5 +17,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    "prettier-plugin-tailwindcss", // MUST come last
+  ],
 };

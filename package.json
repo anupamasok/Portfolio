@@ -4,12 +4,15 @@
   "description": "Anupams portfolio website",
   "main": "tailwind.config.js",
   "devDependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "prettier": "^2.8.6",
+    "prettier-plugin-tailwindcss": "^0.2.5",
     "tailwindcss": "^3.2.7"
   },
   "scripts": {
-    "watch": "tailwindcss build ./src/styles.css -o ./public/styles.css --watch",
-    "build": "tailwindcss build ./src/styles.css -o ./public/styles.css",
-    "prod": "tailwindcss build ./src/styles.css -o ./public/styles.css  --minify"
+    "watch": "npx tailwindcss build -i src/styles.css -o ./_site/public/styles.css --watch",
+    "build": "npx tailwindcss build -i src/styles.css -o ./_site/public/styles.css",
+    "prod": "npx tailwindcss build -i src/styles.css -o ./_site/public/styles.css  --minify"
   },
   "repository": {
     "type": "git",
