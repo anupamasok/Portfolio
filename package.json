@@ -4,9 +4,10 @@
   "description": "Anupams portfolio website",
   "main": "tailwind.config.js",
   "devDependencies": {
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.2.7"
   },
   "scripts": {
+    "watch": "tailwindcss build ./src/styles.css -o ./public/styles.css --watch",
     "build": "tailwindcss build ./src/styles.css -o ./public/styles.css",
     "prod": "tailwindcss build ./src/styles.css -o ./public/styles.css  --minify"
   },
