@@ -1,47 +1,27 @@
-## Getting Started
+## Portfolio
 
-1.  Clone the repository
+This project uses `eleventy` and `tailwind`. `nunjuks` is used for templating
+along with `eleventy`.
 
-         git clone https://github.com/anupamasok/Portfolio.git {{ your project name }}
+The contents in the `src` folder are considered by `eleventy` as the source and
+outputted to `public` folder. The public folder is served in the HTTP server.
 
-    Alternately you can download the zip file and unzip it.
+Tailwind uses `src/styles.css` as the source and outputs the final styles to
+`src/css/styles.css`. The final HTML uses this stylesheet.
 
-2.  You will now have the cloned project folder. Open the project in
-    Visual Studio Code editor (recommended code editor for Tailwind CSS
-    Projects)
+## Commands
 
-3.  Open new terminal within Visual Studio Code
+### local testing
 
-4.  Download and install NPM - [A Beginner’s Guide to npm](https://www.sitepoint.com/npm-guide/)
+Runs an HTML server in `localhost:8080` and watches for changes in style.css and
+the HTML files.
 
-5.  Initialize the project with defaults
+```bash
+npm run dev
+```
 
-         npm init -y
+### prod
 
-6.  Install dependencies
-
-        npm install
-
-7.  Build using Tailwind CSS
-
-        npm run build
-
-8.  Open the `public > index.html` file in your browser and you should see the website.
-
-## How to use
-
-- Go to `public > index.html`
-- If you need to add more HTML pages, add them in the `public` folder.
-- To extract classes and use the `@apply` directive, edit the custom CSS file in `src > styles.css`. Add any amount of custom CSS within this file. Refer [https://tailwindcss.com/docs/installation#using-a-custom-css-file](https://tailwindcss.com/docs/installation#using-a-custom-css-file)
-
-NOTE: Do NOT edit the file `public > styles.css` directly. The CSS here is generated from `src > styles.css` using Tailwind when you build.
-
-## Watch For changes during Development
-
-     npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch
-
-## Optimize for production
-
-Before pushing your code (the `public` folder) for production, run the below command to reduce the size of `styles.css` within the public folder
-
-     npm run prod
+```bash
+npm run prod
+```
