@@ -132,5 +132,4 @@ dist
 # other directories and files
 .DS_Store
 _site/
-public/
 src/css/styles.css
