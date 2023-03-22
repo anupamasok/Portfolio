@@ -1,9 +1,95 @@
-{% macro service(title, quote, author) %}
-    <div class="row text-center">
-        <h1 class="sectionTitle">
-            {{title}}
-        </h1>
-        <p class="pt-4">“{{quote}}” - <a class="font-light">{{author}}</a>
-        </p>
-    </div>
+{% macro titleQuote(title, quote, author) %}
+<div class="row text-center">
+    <h1 class="sectionTitle">
+        {{title}}
+    </h1>
+    <p class="pt-4">“{{quote}}” - <a class="font-light">{{author}}</a>
+    </p>
+</div>
 {% endmacro%}
+
+
+{% macro experience(companyLink, companyLogoFilePath, companyName, roleTitle, fromTime, tillTime, location, desc) %}
+<div class="experience-company-outer">
+    <!-- logo -->
+    <div class="experience-left">
+        <div>
+            <div class="experience-left-logo">
+                <a href="{{companyLink}}" target="_blank" rel="noopener noreferrer">
+                    <img alt="content" class="experience-left-logo-img" src="{{companyLogoFilePath}}">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Positions -->
+    <div class="experience-right">
+        <div class="flex lg:items-center lg:mb-5">
+            <div class="flex-grow sm:pl-6 py-2">
+                <!-- Title -->
+                <h1 class="text-3xl mb-1">
+                    {{companyName}}
+                </h1>
+                <h1 class="experience-position">
+                    {{roleTitle}}</h1>
+                <div class=" justify-start mb-4 text-sm text-gray-500">
+                    <ion-icon name="calendar-outline" class="inline-flex experience-position-sub-icon"></ion-icon>
+                    <h3 class="inline-flex "> {{fromTime}} - {{tillTime}} </h3>
+                    <h2 class="inline-flex sm:mx-2">|</h2>
+                    <ion-icon name="location-outline" class="inline-flex experience-position-sub-icon"></ion-icon>
+                    <h3 class="inline-flex">{{location}}</h3>
+                </div>
+                <!-- Desc -->
+                {{desc |safe}}
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro%}
+
+{% macro experiences(companyLink, companyLogoFilePath, companyName, roles) %}
+<div class="experience-company-outer">
+    <!-- logo -->
+    <div class="experience-left">
+        <div>
+            <div class="experience-left-logo">
+                <a href="{{companyLink}}" target="_blank" rel="noopener noreferrer">
+                    <img alt="content" class="experience-left-logo-img" src="{{companyLogoFilePath}}">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Positions -->
+    <div class="experience-right">
+        <div class="flex lg:items-center lg:mb-5">
+            <div class="flex-grow sm:pl-6 py-2">
+                <!-- Title -->
+                <h1 class="text-3xl mb-1">
+                    {{companyName}}
+                </h1>
+
+                {% for roleTitle, fromTime, tillTime, location, desc in roles %}
+                <h1 class="experience-position">
+                    {{roleTitle}}</h1>
+                <div class=" justify-start mb-4 text-sm text-gray-500">
+                    <ion-icon name="calendar-outline" class="inline-flex experience-position-sub-icon"></ion-icon>
+                    <h3 class="inline-flex "> {{fromTime}} - {{tillTime}} </h3>
+                    <h2 class="inline-flex sm:mx-2">|</h2>
+                    <ion-icon name="location-outline" class="inline-flex experience-position-sub-icon"></ion-icon>
+                    <h3 class="inline-flex">{{location}}</h3>
+                </div>
+                <!-- Desc -->
+                {{desc |safe}}
+
+                {% if not loop.last %}
+                <div class="py-4"></div>
+                {% endif %}
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro%}
+
+
+{# roleTitle, fromTime, tillTime, location, desc #}

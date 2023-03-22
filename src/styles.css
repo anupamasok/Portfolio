@@ -25,7 +25,7 @@
   }
 
   .experience-left-logo-img {
-    @apply animCharacteristics mx-auto h-full w-2/3 object-cover object-center sm:w-full;
+    @apply animCharacteristics mx-auto h-full max-h-60 w-2/3 object-cover object-center sm:w-full;
   }
 
   .experience-right {
