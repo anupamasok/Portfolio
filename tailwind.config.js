@@ -13,8 +13,8 @@ module.exports = {
       colors: {
         cyan: colors.cyan,
         emerald: colors.emerald,
-        mainColor: colors.lime,
-        secondaryColor: colors.cyan,
+        mainColor: colors.amber,
+        secondaryColor: colors.yellow,
       },
     },
   },
