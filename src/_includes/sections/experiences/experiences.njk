@@ -1,71 +1,58 @@
 <!-- Experiences -->
-<section class="sectionouter snap-start ">
+<section class="sectionOuter">
     <div class="max-w-6xl mx-auto mb-10">
-        {% import 'sections/macro.njk' as macro %}
+        {% import "sections/macro.njk" as macro %}
         {{ macro.titleQuote(
         'Experiences',
         "No man ever steps in the same river twice, for it's not the same river and he's not the same man.",
         'Heraclitus') }}
         <div class="row">
-            <section class="body-font">
-                <div class="container sm:px-5 py-4 mx-auto flex flex-col">
+            <div class="body-font">
+                <div class="container   py-4 mx-auto flex flex-col">
                     <div class="lg:w-5/6 mx-auto">
-
                         <!-- Target Company -->
                         {% set targetExpDesc %}
-                        {% include 'sections/experiences/exp-target.njk' %}
+                        {% include "sections/experiences/exp-target.html" %}
                         {% endset %}
-
                         {% set targetRoles = [
                         ['Senior Software Engineer','Apr 2022','Present','Bengaluru, India',targetExpDesc]] %}
-
-                        {{macro.experiences(
-                        "https://www.target.com/",
-                        "assets/img/Logos/target_logo.png",
+                        {{ macro.experiences("https://www.target.com/","assets/img/Logos/target_logo.png",
                         "Target India",
                         targetRoles
                         )}}
-
                         <!-- Sandvine Company -->
                         {% set sanvineExpDescSSE %}
-                        {% include 'sections/experiences/exp-sandvine-sse.njk' %}
+                        {% include "sections/experiences/exp-sandvine-sse.njk" %}
                         {% endset %}
                         {% set sanvineExpDescSE %}
-                        {% include 'sections/experiences/exp-sandvine-se.njk' %}
+                        {% include "sections/experiences/exp-sandvine-se.njk" %}
                         {% endset %}
-
                         {% set sandvineRoles = [
                         ['Senior Software Engineer','Sept 2021','Mar 2022','Bengaluru, India',sanvineExpDescSSE],
                         ['Software Engineer','Jun 2019','Oct 2021','Bengaluru, India',sanvineExpDescSE]] %}
-
-                        {{macro.experiences(
+                        {{ macro.experiences(
                         "https://www.sandvine.com/",
                         "assets/img/Logos/sandvine_logo.png",
                         "Sandvine Networks",
                         sandvineRoles
                         )}}
-
                         <!-- NIT Calicut -->
                         {% set nitcFCI %}
-                        {% include 'sections/experiences/exp-nitc-fci.njk' %}
+                        {% include "sections/experiences/exp-nitc-fci.njk" %}
                         {% endset %}
                         {% set nitcBtech %}
-                        {% include 'sections/experiences/exp-nitc-btech.njk' %}
+                        {% include "sections/experiences/exp-nitc-btech.njk" %}
                         {% endset %}
-
                         {% set nitcRoles = [
                         ['Summer Intern','May','July 2018','Calicut, India',nitcFCI],
                         ['B.Tech, Computer Science & Engineering','2015','2019','Calicut, India',nitcBtech]] %}
-
-                        {{macro.experiences(
+                        {{ macro.experiences(
                         "http://www.nitc.ac.in/",
                         "assets/img/Logos/nitc_logo.png",
                         "NIT Calicut",
                         nitcRoles
                         )}}
-
                     </div>
-
                     <div class="sm:mx-auto text-gray-400 sm:mb-20">
                         <a href="https://drive.google.com/file/d/1-o4hhgduy7vqhjafndq7me9ydknce1qz/view?usp=sharing"
                             target="_blank" rel="noopener noreferrer" class="inline-flex sectionButton">
@@ -81,6 +68,7 @@
                         </a>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
+    </div>
 </section>
