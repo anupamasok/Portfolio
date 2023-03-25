@@ -12,8 +12,8 @@
   },
   "scripts": {
     "serve": "npx eleventy --serve",
-    "watch": "npx tailwindcss build -i src/styles.css -o ./src/css/styles.css --watch",
-    "build": "npx tailwindcss build -i src/styles.css -o ./src/css/styles.css --minify",
+    "watch": "npx tailwindcss build -i src/styles.css -o ./public/css/styles.css --watch  --minify",
+    "build": "npx tailwindcss build -i src/styles.css -o ./public/css/styles.css --minify",
     "dev": "concurrently --kill-others \"npm run serve\" \"npm run watch\"",
     "prodServe": "concurrently --kill-others \"npm run serve\" \"npm run build\""
   },

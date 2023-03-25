@@ -3,7 +3,7 @@ module.exports = {
   content: [
     // "./public/**/*.{html,njk}",
     // "./src/**/*.{html,njk}",
-    "./src/_includes/**/*.{html,njk,css}",
+    "./src/**/*.{html,njk,css}",
   ],
   theme: {
     extend: {
@@ -15,6 +15,10 @@ module.exports = {
         emerald: colors.emerald,
         mainColor: colors.amber,
         secondaryColor: colors.yellow,
+      },
+      fontFamily: {
+        lato: ["Lato"],
+        raleway: ["Raleway"],
       },
     },
   },
