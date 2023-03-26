@@ -26,6 +26,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    require("tailwindcss-neumorphism"),
     "prettier-plugin-tailwindcss", // MUST come last
   ],
 };
