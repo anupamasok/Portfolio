@@ -13,13 +13,8 @@ companyName, roles) %}
     <div>
       <div class="experience-left-logo">
         <a href="{{ companyLink }}" target="_blank" rel="noopener noreferrer">
-          <img
-            alt="content"
-            class="experience-left-logo-img"
-            width="500"
-            height="600"
-            src="{{ companyLogoFilePath }}"
-          />
+          <img alt="content" class="experience-left-logo-img" width="500" height="600"
+            src="{{ companyLogoFilePath }}" />
         </a>
       </div>
     </div>
@@ -35,16 +30,10 @@ companyName, roles) %}
         {% for roleTitle, fromTime, tillTime, location, desc in roles -%}
         <h1 class="experience-position">{{ roleTitle }}</h1>
         <div class="mb-4 justify-start text-sm text-gray-500">
-          <ion-icon
-            name="calendar-outline"
-            class="experience-position-sub-icon inline-flex"
-          ></ion-icon>
+          <ion-icon name="calendar-outline" class="experience-position-sub-icon inline-flex"></ion-icon>
           <h3 class="inline-flex">{{ fromTime }} - {{ tillTime }}</h3>
           <h2 class="inline-flex sm:mx-2">|</h2>
-          <ion-icon
-            name="location-outline"
-            class="experience-position-sub-icon inline-flex"
-          ></ion-icon>
+          <ion-icon name="location-outline" class="experience-position-sub-icon inline-flex"></ion-icon>
           <h3 class="inline-flex">{{ location }}</h3>
         </div>
         {{ desc | safe }}
@@ -55,31 +44,34 @@ companyName, roles) %}
     </div>
   </div>
 </div>
-{% endmacro %} {% macro skillSection(titleVal,skills) %}
+{% endmacro %}
+
+{% macro skillSection(titleVal,icon,skills) %}
 <div class="mx-auto lg:w-4/6">
   <hr class="mb-5 sm:ml-5" />
-  <h1 class="skillTitle">{{ titleVal }}</h1>
+  <h1>
+    <div class="inline-flex skillTitle">{{ titleVal | safe }}</div>
+    <div class="inline-flex skillTitleIcon"> {{ icon | safe }}</div>
+  </h1>
   <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-0 sm:py-2">
     <div>
-      {% for skillName, skillCount in skills %} {% if (loop.index) <=
-      (loop.length+1)/2 %}
-      <div class="skillItem">
+      {% for skillName, skillCount in skills %} {% if (loop.index) <= (loop.length+1)/2 %} <div class="skillItem">
         <p>{{ skillName }}</p>
         {{ skillStar(skillCount) }}
-      </div>
-      {% endif %} {% endfor %}
     </div>
-    <div>
-      {% for skillName, skillCount in skills %} {% if (loop.index) >
-      (loop.length+1)/2 %}
-      <div class="skillItem">
-        <p>{{ skillName }}</p>
-        {{ skillStar(skillCount) }}
-      </div>
-      {% endif %} {% endfor %}
-    </div>
+    {% endif %} {% endfor %}
   </div>
-  <div class="py-1"></div>
+  <div>
+    {% for skillName, skillCount in skills %} {% if (loop.index) >
+    (loop.length+1)/2 %}
+    <div class="skillItem">
+      <p>{{ skillName }}</p>
+      {{ skillStar(skillCount) }}
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
+<div class="py-1"></div>
 </div>
 {% endmacro %} {% macro skillStar(num) %}
 <div class="skillStarsGroup">

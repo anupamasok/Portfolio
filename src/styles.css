@@ -62,7 +62,7 @@
 
   .hoverClickAnim {
     @apply animCharacteristics cursor-pointer
-  touch-manipulation hover:shadow-xl hover:shadow-inner hover:shadow-mainColor-400;
+ touch-manipulation hover:shadow-xl hover:shadow-inner hover:shadow-mainColor-400;
   }
 
   .hoverColorChange {
@@ -75,7 +75,7 @@
   }
 
   .skillItem {
-    @apply flex items-center rounded px-1 py-1 tracking-wide text-gray-600 duration-75 hover:bg-gray-100 sm:my-1 sm:px-5;
+    @apply sm:text-md flex items-center rounded px-1 py-1 tracking-wide text-gray-600 duration-75 hover:bg-gray-100 sm:my-1 sm:px-5;
   }
 
   .skillStars {
@@ -87,7 +87,11 @@
   }
 
   .skillTitle {
-    @apply px-1 pb-1 text-2xl text-gray-700 max-sm:pb-5 sm:pl-5 md:pb-3;
+    @apply translate-y-0.5 px-1 pb-1 text-2xl text-gray-700 max-sm:pb-5 max-sm:text-xl sm:pl-5 md:pb-3;
+  }
+
+  .skillTitleIcon {
+    @apply my-1 translate-y-1.5 text-xl;
   }
 
   .socialIconSize {
