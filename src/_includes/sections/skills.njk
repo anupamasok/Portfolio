@@ -2,73 +2,45 @@
 {% import 'sections/macro.njk' as macro %}
 <section class="sectionOuter snap-start">
   <div class="mx-auto mb-10 max-w-6xl">
-    <div class="mb-4 text-center sm:mb-5">
-      <h1 class="sectionTitle">Technical Skills</h1>
-      <p class="pt-2">
-        "When love and skill work together, expect a masterpiece." -
-        <a class="font-light">John Ruskin</a>
-      </p>
-    </div>
-    <div class="w-full max-sm:px-2 px-5 lg:px-10 lg:py-10">
+    {{
+    macro.titleQuote(
+    "Technical Skills",
+    "When love and skill work together, expect a masterpiece.",
+    "John Ruskin"
+    )
+    }}
+    <div class="w-full px-5 max-sm:px-2 lg:px-10 lg:py-10">
       <!-- Skill set -->
       <!-- Languages -->
-      {% set langSkills = {
-      'Golang': '5',
-      'C / C++': '4',
-      'Python': '4',
-      'Bash Scripting': '4',
-      'TCL': '3'
-      } %}
-      {{ macro.skillSection('Languages','<ion-icon name="code-slash-outline"></ion-icon>',langSkills) }}
+      {% set langSkills = { 'Golang': '5', 'C / C++': '4', 'Python': '4', 'Bash
+      Scripting': '4', 'TCL': '3' } %} {{
+      macro.skillSection('Languages','<ion-icon name="code-slash-outline"></ion-icon>',langSkills) }}
       <!-- separation -->
       <div class="mb-5"></div>
       <!-- Skill set -->
       <!-- tools -->
-      {% set toolSkills = {
-      'Git': '5',
-      'Visual Studio Code': '4',
-      'Vim': '4',
-      'Haproxy (LB)': '4',
-      'Pprof (Go)': '4',
-      'Delve (Go)': '3',
-      'Consul': '3',
-      'Confd': '3',
-      'Kubernetes': '3',
-      'Docker': '2'
-      } %}
-      {{ macro.skillSection('Tools and Frameworks','<ion-icon name="construct-outline"></ion-icon>',toolSkills) }}
+      {% set toolSkills = { 'Git': '5', 'Visual Studio Code': '4', 'Vim': '4',
+      'Haproxy (LB)': '4', 'Pprof (Go)': '4', 'Delve (Go)': '3', 'Consul': '3',
+      'Confd': '3', 'Kubernetes': '3', 'Docker': '2' } %} {{
+      macro.skillSection('Tools and Frameworks','<ion-icon name="construct-outline"></ion-icon>',toolSkills) }}
       <!-- separation -->
       <div class="mb-5"></div>
       <!-- Skill set -->
       <!-- web dev -->
-      {% set webSkills = {
-      'Tailwind CSS': '4',
-      'Bootstrap': '4',
-      'Django': '3',
-      'React': '2'
-      } %}
-      {{ macro.skillSection('Web Development','<ion-icon name="logo-react"></ion-icon>',webSkills) }}
+      {% set webSkills = { 'Tailwind CSS': '4', 'Bootstrap': '4', 'Django': '3',
+      'React': '2' } %} {{ macro.skillSection('Web Development','<ion-icon name="logo-react"></ion-icon>',webSkills) }}
       <!-- separation -->
       <div class="mb-5"></div>
       <!-- Skill set -->
       <!-- Operating Systems -->
-      {% set osSkills = {
-      'Linux': '5',
-      'Windows': '5',
-      'Mac': '4'
-      } %}
-      {{ macro.skillSection('Operating Systems','<ion-icon name="desktop-outline"></ion-icon>',osSkills) }}
+      {% set osSkills = { 'Linux': '5', 'Windows': '5', 'Mac': '4' } %} {{
+      macro.skillSection('Operating Systems','<ion-icon name="desktop-outline"></ion-icon>',osSkills) }}
       <!-- separation -->
       <div class="mb-5"></div>
       <!-- Skill set -->
       <!-- Graphic Design -->
-      {% set graphicsSkills = {
-      'Adobe Photoshop': '5',
-      'Adobe Lightroom': '5',
-      'Adobe Premier Pro': '4',
-      'Adobe XD': '3',
-      'Adobe After Effects': '3'
-      } %}
+      {% set graphicsSkills = { 'Adobe Photoshop': '5', 'Adobe Lightroom': '5',
+      'Adobe Premier Pro': '4', 'Adobe XD': '3', 'Adobe After Effects': '3' } %}
       {{ macro.skillSection('Graphics and Design','<ion-icon name="images-outline"></ion-icon>',graphicsSkills) }}
     </div>
   </div>

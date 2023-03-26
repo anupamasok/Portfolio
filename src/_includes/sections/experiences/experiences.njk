@@ -1,74 +1,90 @@
 <!-- Experiences -->
 <section class="sectionOuter">
-    <div class="max-w-6xl mx-auto mb-10">
-        {% import "sections/macro.njk" as macro %}
-        {{ macro.titleQuote(
-        'Experiences',
-        "No man ever steps in the same river twice, for it's not the same river and he's not the same man.",
-        'Heraclitus') }}
-        <div class="row">
-            <div class="body-font">
-                <div class="container   py-4 mx-auto flex flex-col">
-                    <div class="lg:w-5/6 mx-auto">
-                        <!-- Target Company -->
-                        {% set targetExpDesc %}
-                        {% include "sections/experiences/exp-target.html" %}
-                        {% endset %}
-                        {% set targetRoles = [
-                        ['Senior Software Engineer','Apr 2022','Present','Bengaluru, India',targetExpDesc]] %}
-                        {{ macro.experiences("https://www.target.com/","assets/img/Logos/target_logo.png",
-                        "Target India",
-                        targetRoles
-                        )}}
-                        <!-- Sandvine Company -->
-                        {% set sanvineExpDescSSE %}
-                        {% include "sections/experiences/exp-sandvine-sse.njk" %}
-                        {% endset %}
-                        {% set sanvineExpDescSE %}
-                        {% include "sections/experiences/exp-sandvine-se.njk" %}
-                        {% endset %}
-                        {% set sandvineRoles = [
-                        ['Senior Software Engineer','Sept 2021','Mar 2022','Bengaluru, India',sanvineExpDescSSE],
-                        ['Software Engineer','Jun 2019','Oct 2021','Bengaluru, India',sanvineExpDescSE]] %}
-                        {{ macro.experiences(
-                        "https://www.sandvine.com/",
-                        "assets/img/Logos/sandvine_logo.png",
-                        "Sandvine Networks",
-                        sandvineRoles
-                        )}}
-                        <!-- NIT Calicut -->
-                        {% set nitcFCI %}
-                        {% include "sections/experiences/exp-nitc-fci.njk" %}
-                        {% endset %}
-                        {% set nitcBtech %}
-                        {% include "sections/experiences/exp-nitc-btech.njk" %}
-                        {% endset %}
-                        {% set nitcRoles = [
-                        ['Summer Intern','May','July 2018','Calicut, India',nitcFCI],
-                        ['B.Tech, Computer Science & Engineering','2015','2019','Calicut, India',nitcBtech]] %}
-                        {{ macro.experiences(
-                        "https://www.nitc.ac.in/",
-                        "assets/img/Logos/nitc_logo.png",
-                        "NIT Calicut",
-                        nitcRoles
-                        )}}
-                    </div>
-                    <div class="sm:mx-auto text-gray-400 sm:mb-20">
-                        <a href="https://drive.google.com/file/d/1-O4HHgDuy7vqhjAfNdq7ME9yDkNcE1Qz/view?usp=share_link"
-                            target="_blank" rel="noopener noreferrer" class="inline-flex sectionButton">
-                            Download my Résumé <ion-icon name="code-download-outline"
-                                class="translate-y-1 text-lg sm:text-2xl pl-2"></ion-icon>
-                        </a>
-                        <!-- sep -->
-                        <div class="sm:inline-block sm:mr-2"></div>
-                        <a href="mailto:anupamasokofficial@gmail.com" target="_blank" rel="noopener noreferrer"
-                            class="hidden sm:inline-flex inline-flex sectionButton">
-                            Get In touch with me <ion-icon name="chatbubbles-outline"
-                                class="translate-y-1 text-lg sm:text-2xl pl-2"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <div class="mx-auto mb-10 max-w-6xl">
+    {% import "sections/macro.njk" as macro %}
+    {{
+    macro.titleQuote(
+    "Experiences",
+    "No man ever steps in the same river twice, for it's not the same river and he's not the same man.",
+    "Heraclitus"
+    )
+    }}
+    <div class="row">
+      <div class="body-font">
+        <div class="container mx-auto flex flex-col py-4">
+          <div class="mx-auto lg:w-5/6">
+            <!-- Target Company -->
+            {% set targetExpDesc %}
+            {% include
+            "sections/experiences/exp-target.html" %}
+            {% endset %} {% set
+            targetRoles = [ ['Senior Software Engineer','Apr
+            2022','Present','Bengaluru, India',targetExpDesc]] %}
+            {{
+            macro.experiences(
+            "https://www.target.com/",
+            "assets/img/Logos/target_logo.png",
+            "Target India",
+            targetRoles
+            )
+            }}
+            <!-- Sandvine Company -->
+            {% set sanvineExpDescSSE %}
+            {% include
+            "sections/experiences/exp-sandvine-sse.njk" %}
+            {% endset %} {% set
+            sanvineExpDescSE %}
+            {% include
+            "sections/experiences/exp-sandvine-se.njk" %}
+            {% endset %} {% set
+            sandvineRoles = [ ['Senior Software Engineer','Sept 2021','Mar
+            2022','Bengaluru, India',sanvineExpDescSSE], ['Software
+            Engineer','Jun 2019','Oct 2021','Bengaluru,
+            India',sanvineExpDescSE]] %}
+            {{
+            macro.experiences(
+            "https://www.sandvine.com/",
+            "assets/img/Logos/sandvine_logo.png",
+            "Sandvine Networks",
+            sandvineRoles
+            )
+            }}
+            <!-- NIT Calicut -->
+            {% set nitcFCI %}
+            {% include "sections/experiences/exp-nitc-fci.njk"
+            %}
+            {% endset %} {% set nitcBtech %}
+            {% include
+            "sections/experiences/exp-nitc-btech.njk" %}
+            {% endset %} {% set
+            nitcRoles = [ ['Summer Intern','May','July 2018','Calicut,
+            India',nitcFCI], ['B.Tech, Computer Science &
+            Engineering','2015','2019','Calicut, India',nitcBtech]] %}
+            {{
+            macro.experiences(
+            "https://www.nitc.ac.in/",
+            "assets/img/Logos/nitc_logo.png",
+            "NIT Calicut",
+            nitcRoles
+            )
+            }}
+          </div>
+          <div class="text-gray-400 sm:mx-auto sm:mb-20">
+            <a href="https://drive.google.com/file/d/1-O4HHgDuy7vqhjAfNdq7ME9yDkNcE1Qz/view?usp=share_link"
+              target="_blank" rel="noopener noreferrer" class="sectionButton inline-flex">
+              Download my Résumé
+              <ion-icon name="code-download-outline" class="translate-y-1 pl-2 text-lg sm:text-2xl"></ion-icon>
+            </a>
+            <!-- sep -->
+            <div class="sm:mr-2 sm:inline-block"></div>
+            <a href="mailto:anupamasokofficial@gmail.com" target="_blank" rel="noopener noreferrer"
+              class="sectionButton inline-flex hidden sm:inline-flex">
+              Get In touch with me
+              <ion-icon name="chatbubbles-outline" class="translate-y-1 pl-2 text-lg sm:text-2xl"></ion-icon>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
