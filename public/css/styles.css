@@ -420,11 +420,15 @@ video {
 }
 
 .font-primary {
-  font-family: Lato;
+  font-family: Roboto;
 }
 
-.font-secondary {
-  font-family: Raleway;
+.font-titles {
+  font-family: Lora;
+}
+
+.font-code {
+  font-family: Source Code Pro;
 }
 
 .bg-card {
@@ -557,7 +561,7 @@ video {
 }
 
 .experience-position {
-  font-family: Raleway;
+  font-family: Roboto;
   margin-top: 0.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -709,6 +713,7 @@ video {
 }
 
 .skillItem {
+  font-family: Source Code Pro;
   display: flex;
   align-items: center;
   border-radius: 0.25rem;
@@ -875,7 +880,7 @@ video {
 }
 
 .sectionTitle {
-  font-family: Raleway;
+  font-family: Lora;
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
@@ -1240,9 +1245,9 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .my-6 {
@@ -1253,16 +1258,6 @@ video {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
-
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .mb-1 {
@@ -1436,10 +1431,6 @@ video {
 
 .max-w-screen-xl {
   max-width: 1280px;
-}
-
-.max-w-xl {
-  max-width: 36rem;
 }
 
 .flex-shrink-0 {
@@ -2226,10 +2217,6 @@ video {
     font-weight: 300;
   }
 
-  .sm\:font-semibold {
-    font-weight: 600;
-  }
-
   .sm\:leading-relaxed {
     line-height: 1.625;
   }
@@ -2384,20 +2371,8 @@ video {
     width: 50%;
   }
 
-  .xl\:max-w-6xl {
-    max-width: 72rem;
-  }
-
-  .xl\:max-w-xl {
-    max-width: 36rem;
-  }
-
   .xl\:max-w-5xl {
     max-width: 64rem;
-  }
-
-  .xl\:max-w-4xl {
-    max-width: 56rem;
   }
 
   .xl\:px-0 {

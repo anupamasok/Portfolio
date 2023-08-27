@@ -4,11 +4,15 @@
 
 @layer base {
   .font-primary {
-    @apply font-lato;
+    @apply font-roboto;
   }
 
-  .font-secondary {
-    @apply font-raleway;
+  .font-titles {
+    @apply font-playfair;
+  }
+
+  .font-code {
+    @apply font-sourcecode;
   }
 
   .bg-card {
@@ -45,7 +49,7 @@
   }
 
   .experience-position {
-    @apply font-secondary mt-2 text-xl tracking-wide text-gray-700;
+    @apply font-primary mt-2 text-xl tracking-wide text-gray-700;
   }
 
   .experience-position-sub-icon {
@@ -78,7 +82,7 @@
   }
 
   .skillItem {
-    @apply flex items-center rounded px-1 py-1 tracking-wide text-gray-600 transition-all duration-100 ease-in-out hover:nm-flat-mainColor-50-xs sm:my-1 sm:px-5 sm:text-lg;
+    @apply font-code flex items-center rounded px-1 py-1 tracking-wide text-gray-600 transition-all duration-100 ease-in-out hover:nm-flat-mainColor-50-xs sm:my-1 sm:px-5 sm:text-lg;
   }
 
   .skillStars {
@@ -122,7 +126,7 @@
   }
 
   .sectionTitle {
-    @apply font-secondary text-4xl font-bold text-gray-800 sm:text-6xl;
+    @apply font-titles text-4xl font-bold text-gray-800 sm:text-6xl;
   }
 
   .animCharacteristics {

@@ -17,8 +17,9 @@ module.exports = {
         secondaryColor: colors.yellow,
       },
       fontFamily: {
-        lato: ["Lato"],
-        raleway: ["Raleway"],
+        playfair: ["Lora"],
+        roboto: ["Roboto"],
+        sourcecode: ["Source Code Pro"],
       },
     },
   },
