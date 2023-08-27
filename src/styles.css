@@ -73,7 +73,7 @@
   }
 
   .hoverConnectIcon {
-    @apply hoverColorChange hoverConnectAnim mb-5 inline-flex flex-shrink-0 cursor-pointer items-center justify-center
+    @apply hoverColorChange hoverConnectAnim mb-2 inline-flex flex-shrink-0 cursor-pointer items-center justify-center
    rounded-full max-lg:mb-3;
   }
 
