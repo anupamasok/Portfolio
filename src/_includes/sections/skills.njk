@@ -27,22 +27,24 @@
       <!-- Skill set -->
       <!-- Tools -->
       {% set toolSkills = {
+      'AWX': '5',
+      'Bashly': '5',
       'Git': '5',
       'Kubernetes': '5',
       'Grafana': '5',
+      'Prometheus': '5',
+      'Thanos': '3',
       'Pprof (Go)': '4',
       'tmux': '4',
+      'Docker': '4',
+      'Vela (CICD)': '4',
+      'Ansible': '4',
+      'Delve (Go)': '3',
       'Confd': '3',
       'Consul': '3',
-      'Delve (Go)': '3',
-      'Docker': '3',
       'Haproxy (LB)': '3',
       'Make': '3',
-      'Vim': '3',
-      'Vela (CICD)': '4',
-      'Prometheus': '5',
-      'Ansible': '4',
-      'AWX': '5'
+      'Vim': '3'
       } %}
       {{ macro.skillSection('Tools and Frameworks', '<ion-icon name="construct-outline"></ion-icon>', toolSkills) }}
 
@@ -55,7 +57,9 @@
       'Kustomize': '5',
       'Kubectl': '5',
       'Helm': '4',
-      'Kubeadm': '3'
+      'Kubeadm': '3',
+      'K9S': '5',
+      'K3S': '3'
       } %}
       {{ macro.skillSection('Kubernetes Tools', '<ion-icon name="cloud-circle-outline"></ion-icon>', k8sSkills) }}
 
