@@ -13,13 +13,29 @@
       <div class="body-font">
         <div class="container mx-auto flex flex-col py-4">
           <div class="mx-auto lg:w-5/6">
-            <!-- Target Company -->
-            {% set targetExpDesc %}
-            {% include
-            "sections/experiences/exp-target.html" %}
-            {% endset %} {% set
-            targetRoles = [ ['Senior Software Engineer','Apr
-            2022','Present','Bengaluru, India',targetExpDesc]] %}
+            {# --- Target India --- #}
+            {% set targetExpDescSSE %}
+            {% include "sections/experiences/exp-target-sse.njk" %}
+            {% endset %}
+            {% set targetExpDescLead %}
+            {% include "sections/experiences/exp-target-lead.njk" %}
+            {% endset %}
+            {% set targetRoles = [
+               [
+            'Lead Engineer',
+            'Aug 2024',
+            'Present',
+            'Bengaluru, India',
+            targetExpDescLead
+            ],
+            [
+            'Senior Software Engineer',
+            'Apr 2022',
+            'Aug 2024',
+            'Bengaluru, India',
+            targetExpDescSSE
+            ]
+            ] %}
             {{
             macro.experiences(
             "https://www.target.com/",
@@ -28,19 +44,30 @@
             targetRoles
             )
             }}
-            <!-- Sandvine Company -->
+
+            {# --- Sandvine Networks --- #}
             {% set sanvineExpDescSSE %}
-            {% include
-            "sections/experiences/exp-sandvine-sse.njk" %}
-            {% endset %} {% set
-            sanvineExpDescSE %}
-            {% include
-            "sections/experiences/exp-sandvine-se.njk" %}
-            {% endset %} {% set
-            sandvineRoles = [ ['Senior Software Engineer','Sept 2021','Mar
-            2022','Bengaluru, India',sanvineExpDescSSE], ['Software
-            Engineer','Jun 2019','Oct 2021','Bengaluru,
-            India',sanvineExpDescSE]] %}
+            {% include "sections/experiences/exp-sandvine-sse.njk" %}
+            {% endset %}
+            {% set sanvineExpDescSE %}
+            {% include "sections/experiences/exp-sandvine-se.njk" %}
+            {% endset %}
+            {% set sandvineRoles = [
+            [
+            'Senior Software Engineer',
+            'Sept 2021',
+            'Mar 2022',
+            'Bengaluru, India',
+            sanvineExpDescSSE
+            ],
+            [
+            'Software Engineer',
+            'Jun 2019',
+            'Oct 2021',
+            'Bengaluru, India',
+            sanvineExpDescSE
+            ]
+            ] %}
             {{
             macro.experiences(
             "https://www.sandvine.com/",
@@ -49,17 +76,30 @@
             sandvineRoles
             )
             }}
-            <!-- NIT Calicut -->
+
+            {# --- NIT Calicut --- #}
             {% set nitcFCI %}
-            {% include "sections/experiences/exp-nitc-fci.njk"
-            %}
-            {% endset %} {% set nitcBtech %}
-            {% include
-            "sections/experiences/exp-nitc-btech.njk" %}
-            {% endset %} {% set
-            nitcRoles = [ ['Summer Intern','May','July 2018','Calicut,
-            India',nitcFCI], ['B.Tech, Computer Science &
-            Engineering','2015','2019','Calicut, India',nitcBtech]] %}
+            {% include "sections/experiences/exp-nitc-fci.njk" %}
+            {% endset %}
+            {% set nitcBtech %}
+            {% include "sections/experiences/exp-nitc-btech.njk" %}
+            {% endset %}
+            {% set nitcRoles = [
+            [
+            'Summer Intern',
+            'May',
+            'July 2018',
+            'Calicut, India',
+            nitcFCI
+            ],
+            [
+            'B.Tech, Computer Science & Engineering',
+            '2015',
+            '2019',
+            'Calicut, India',
+            nitcBtech
+            ]
+            ] %}
             {{
             macro.experiences(
             "https://www.nitc.ac.in/",
@@ -69,13 +109,13 @@
             )
             }}
           </div>
+
           <div class="text-gray-400 sm:mx-auto sm:mb-20">
             <a href="https://drive.google.com/file/d/1-O4HHgDuy7vqhjAfNdq7ME9yDkNcE1Qz/view?usp=share_link"
               target="_blank" rel="noopener noreferrer" class="sectionButton inline-flex">
               Download my Résumé
               <ion-icon name="code-download-outline" class="translate-y-1 pl-2 text-lg sm:text-2xl"></ion-icon>
             </a>
-            <!-- sep -->
             <div class="sm:mr-2 sm:inline-block"></div>
             <a href="mailto:anupamasokofficial@gmail.com" target="_blank" rel="noopener noreferrer"
               class="sectionButton inline-flex hidden sm:inline-flex">
