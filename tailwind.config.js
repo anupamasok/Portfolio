@@ -13,8 +13,8 @@ module.exports = {
       colors: {
         cyan: colors.cyan,
         emerald: colors.emerald,
-        mainColor: colors.amber,
-        secondaryColor: colors.yellow,
+        mainColor: colors.sky,
+        secondaryColor: colors.blue,
       },
       fontFamily: {
         playfair: ["Lora"],
