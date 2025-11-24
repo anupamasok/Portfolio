@@ -60,7 +60,9 @@
 {% endmacro %}
 
 {% macro skillSection(titleVal, icon, skills) %}
-  {% set sorted_skills = skills | dictsort(false, 'value') | reverse %}
+  {# sort dictionary by value in descending order #}
+  {% set sorted_skills = skills | sortDictByValue(true) %}
+
   <div class="mx-auto lg:w-4/6">
     <hr class="mb-5 sm:ml-5" />
     <h1>
@@ -69,21 +71,21 @@
     </h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-0 sm:py-2">
       <div>
-        {% for skillName, skillCount in sorted_skills %}
+        {% for skill in sorted_skills %}
           {% if (loop.index) <= (loop.length + 1) / 2 %}
             <div class="skillItem">
-              <p>{{ skillName }}</p>
-              {{ skillStar(skillCount) }}
+              <p>{{ skill.key }}</p>
+              {{ skillStar(skill.value) }}
             </div>
           {% endif %}
         {% endfor %}
       </div>
       <div>
-        {% for skillName, skillCount in sorted_skills %}
+        {% for skill in sorted_skills %}
           {% if (loop.index) > (loop.length + 1) / 2 %}
             <div class="skillItem">
-              <p>{{ skillName }}</p>
-              {{ skillStar(skillCount) }}
+              <p>{{ skill.key }}</p>
+              {{ skillStar(skill.value) }}
             </div>
           {% endif %}
         {% endfor %}
